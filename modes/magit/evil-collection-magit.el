@@ -366,6 +366,12 @@ evil-collection-magit was loaded."
        (,states magit-status-mode-map "gh"  magit-section-up                       "^")
        (,states magit-diff-mode-map "gd" magit-jump-to-diffstat-or-diff "j")
        ((visual) magit-diff-mode-map "y" magit-copy-section-value)
+       ;; Keep counts working `magit-section-mode-map' binds 1-4 and
+       ;; leaks through the overriding maps below.
+       (,states magit-mode-map "1" digit-argument)
+       (,states magit-mode-map "2" digit-argument)
+       (,states magit-mode-map "3" digit-argument)
+       (,states magit-mode-map "4" digit-argument)
        ;; NOTE This is now transient-map and the binding is C-g.
        ;; ((emacs) magit-popup-mode-map "<escape>" "q")
        )

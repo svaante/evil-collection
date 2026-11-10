@@ -72,11 +72,7 @@ When this option is enabled, the stash popup is available on \"Z\"."
   (evil-collection-define-key 'normal 'magit-section-mode-map
     [C-tab]     'magit-section-cycle
     [M-tab]     'magit-section-cycle
-    "gh" 'magit-section-up
-    (kbd "1") 'magit-section-show-level-1
-    (kbd "2") 'magit-section-show-level-2
-    (kbd "3") 'magit-section-show-level-3
-    (kbd "4") 'magit-section-show-level-4)
+    "gh" 'magit-section-up)
   (if evil-collection-want-unimpaired-p
       (progn
         (evil-collection-bind 'magit-section-mode-map
